@@ -49,7 +49,7 @@ export default function Home(props) {
     </div>
     <div className={Container}>
       {
-        (account ===ownerAddress) && posts && !posts.length && (
+        (account === ownerAddress) && posts && !posts.length && (
           /** if the signed in user is the account owner, render a button */
           /** to create the first post */
           <button className={buttonStyle} onClick={navigate}>
@@ -79,7 +79,7 @@ export async function getServerSideProps() {
     provider = new ethers.providers.JsonRpcProvider('https://polygon-rpc.com/')
   }
   
-  const contract = new ethersContract(contractAddress, Blog.abi, provider)
+  const contract = new ethers.Contract(contractAddress, Blog.abi, provider)
   const data = await contract.fetchPosts()
   return {
     props: {
