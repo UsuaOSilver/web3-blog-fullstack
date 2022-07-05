@@ -6,10 +6,10 @@ module.exports = {
     hardhat: {
       chainId: 1337
     },
-    // mumbai: {
-    //   url: "https://rpc-mumbai.matic.today",
-    //   accounts: [process.env.pk]
-    // },
+     mumbai: {
+       url: "https://polygon-mumbai.infura.io/v3/a55d24261c534a599245e3eb82e6ad0b",
+       accounts: [process.env.PRIVATE_KEY]
+     },
     // polygon: {
     //   url: "https://polygon-mumbai.infura.io/v3/a55d24261c534a599245e3eb82e6ad0b",
     //   accounts: [process.env.pk]
