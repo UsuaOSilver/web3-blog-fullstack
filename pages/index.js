@@ -47,7 +47,7 @@ export default function Home(props) {
         ))
       }
     </div>
-    <div className={Container}>
+    <div className={container}>
       {
         (account === ownerAddress) && posts && !posts.length && (
           /** if the signed in user is the account owner, render a button */
@@ -76,7 +76,7 @@ export async function getServerSideProps() {
   } else if (process.env.ENVIRONMENT === 'testnet') {
     provider = new ethers.providers.JsonRpcProvider('https://rpc-mumbai.matic.today')
   } else {
-    provider = new ethers.providers.JsonRpcProvider('https://polygon-rpc.com/')
+    provider = new ethers.providers.JsonRpcProvider('https://polygon-mumbai.infura.io/v3/a55d24261c534a599245e3eb82e6ad0b/')
   }
   
   const contract = new ethers.Contract(contractAddress, Blog.abi, provider)

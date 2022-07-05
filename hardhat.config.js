@@ -11,7 +11,7 @@ module.exports = {
     //   accounts: [process.env.pk]
     // },
     // polygon: {
-    //   url: "https://polygon-rpc.com/",
+    //   url: "https://polygon-mumbai.infura.io/v3/a55d24261c534a599245e3eb82e6ad0b",
     //   accounts: [process.env.pk]
     // }
   }

@@ -68,7 +68,7 @@ export async function getStaticPaths() {
     } else if (process.env.EMVIRONMENT === 'testnet') {
         provider = new ethers.providers.JsonRpcProvider('https://rpc-mumbai.matic.today')       
     } else {
-        provider = new ethers.providers.JsonRpcProvider('https://polygon-rpc.com')
+        provider = new ethers.providers.JsonRpcProvider('https://polygon-mumbai.infura.io/v3/a55d24261c534a599245e3eb82e6ad0b')
     }
     
     const contract = new ethers.Contract(contractAddress, Blog.abi, provider.getSigner())

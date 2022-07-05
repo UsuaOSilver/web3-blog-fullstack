@@ -3,14 +3,14 @@ import { useRouter } from 'next/router';
 import dynamic from 'next/dynamic';
 import { css } from '@emotion/css';
 import { ethers } from 'ethers';
-import { create } from 'ipfs-https-client'
+import { create } from 'ipfs-http-client'
 
 /** import contract address and contract owner address */
 import {
     contractAddress,
 } from '../config'
 
-import Blog from '../artifactscontracts/Blog.sol/Blog.json'
+import Blog from '../artifacts/contracts/Blog.sol/Blog.json'
 
 /** define the ipfs endpoint */
 const client = create('https://ipfs.infura.io:5001/api/v0')
